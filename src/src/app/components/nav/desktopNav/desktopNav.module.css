@@ -1,0 +1,22 @@
+  .mainNav {
+    display: flex;
+    justify-content: center;
+    background: var(--golden);
+    border-radius: 20px 20px 0px 0px;
+  }
+  
+  .mainNav div {
+    text-align: center;
+    flex:1 1;
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  .mainNav div a {
+    text-transform: uppercase;
+    display: block;
+    font-weight: 500;
+    color:var(--sweety-cream);
+    font-size: 16px;
+    border: none;
+  }

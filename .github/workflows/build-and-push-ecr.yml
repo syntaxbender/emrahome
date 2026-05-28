@@ -1,0 +1,47 @@
+name: Build and Push to GHCR
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set image URIs
+        id: image
+        run: |
+          IMAGE_REPO="ghcr.io/${GITHUB_REPOSITORY,,}"
+          echo "repo=${IMAGE_REPO}" >> "$GITHUB_OUTPUT"
+          echo "sha_tag=${IMAGE_REPO}:${GITHUB_SHA}" >> "$GITHUB_OUTPUT"
+          echo "latest_tag=${IMAGE_REPO}:latest" >> "$GITHUB_OUTPUT"
+
+      - name: Build Docker image (SHA tag)
+        run: |
+          docker build -f src/Dockerfile -t "${{ steps.image.outputs.sha_tag }}" .
+
+      - name: Tag Docker image as latest
+        run: |
+          docker tag "${{ steps.image.outputs.sha_tag }}" "${{ steps.image.outputs.latest_tag }}"
+
+      - name: Push Docker images (SHA and latest)
+        run: |
+          docker push "${{ steps.image.outputs.sha_tag }}"
+          docker push "${{ steps.image.outputs.latest_tag }}"

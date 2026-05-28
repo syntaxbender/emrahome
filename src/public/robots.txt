@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.emrahomefashion.com
+
+# Sitemaps
+Sitemap: https://www.emrahomefashion.com/sitemap.xml

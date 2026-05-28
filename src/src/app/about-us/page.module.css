@@ -1,0 +1,269 @@
+.aboutus1>img {
+  width: 690px;
+  height: 900px;
+  object-fit: cover;
+}
+
+.aboutus1>video {
+  width: 690px;
+  height: 700px;
+  object-fit: cover;
+}
+
+.aboutus1 {
+  position: relative;
+  text-align: center;
+}
+
+.aboutus2 {
+  text-align: center;
+  position: relative;
+}
+
+.aboutus2>img {
+  width: 540px;
+  height: 630px;
+  object-fit: cover;
+}
+.aboutus3 {
+  text-align: center;
+}
+
+.aboutus3>img {
+  width: 600px;
+  height: 680px;
+  object-fit: cover;
+}
+
+.aboutus1:after {
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  /* background-color: red; */
+  /* background: red; */
+  top: 400px;
+  left: 80%;
+  right: -15%;
+  height: 2px;
+  background-repeat: repeat-x;
+  transform: rotate(90deg);
+}
+
+.aboutus1:before {
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  /* background-color: red; */
+  /* background: red; */
+  top: 150px;
+  right: 80%;
+  left: -15%;
+  height: 2px;
+  background-repeat: repeat-x;
+  transform: rotate(90deg);
+}
+
+.aboutus2:after {
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  /* background-color: red; */
+  /* background: red; */
+  top: 120px;
+  right: 71%;
+  left: -7%;
+  height: 2px;
+  background-repeat: repeat-x;
+  transform: rotate(90deg);
+}
+
+.aboutus2:before {
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  top: 250px;
+  right: 64%;
+  left: 1%;
+  height: 2px;
+  background-repeat: repeat-x;
+  transform: rotate(90deg);
+}
+
+.lineParagraph {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.lineParagraph:after {
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  /* background-color: red; */
+  /* background: red; */
+  bottom: 150px;
+  left: 71%;
+  right: -7%;
+  height: 2px;
+  background-repeat: repeat-x;
+  transform: rotate(90deg);
+}
+
+.lineParagraph:before {
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  /* background-color: red; */
+  /* background: red; */
+  bottom: 70px;
+  right: 71%;
+  left: -7%;
+  height: 2px;
+  background-repeat: repeat-x;
+  transform: rotate(90deg);
+}
+
+.sectionParagraphContainerFirst {
+  position: relative;
+  padding: 10px 30px 50px 30px !important;
+  background: url(/images/line2.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+.sectionParagraphContainerFirst:after {
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  /* background-color: red; */
+  /* background: red; */
+  top: 150px;
+  left: 84%;
+  right: -32%;
+  height: 2px;
+  background-repeat: repeat-x;
+  transform: rotate(90deg);
+}
+
+.sectionParagraphContainerSecond {
+  position: relative;
+}
+
+.sectionParagraphContainerSecond:after {
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  top: 50px;
+  left: 84%;
+  right: -32%;
+  height: 2px;
+  background-repeat: repeat-x;
+  transform: rotate(90deg);
+}
+.sectionParagraphContainerThird {
+  position: relative;
+}
+
+
+.sectionParagraphContainerThird:before {
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  /* background-color: red; */
+  /* background: red; */
+  bottom: 50px;
+  right: 84%;
+  left: -32%;
+  height: 2px;
+  background-repeat: repeat-x;
+  transform: rotate(90deg);
+}
+
+.paragraphMiniBorder {
+  position: relative;
+  /* display: block; */
+}
+
+/* .paragraphMiniBorder:after {
+  content: "";
+  display: block;
+  margin: 0px auto;
+  padding: 40px 0px;
+  background: url(/images/line2.png);
+  width: 340px;
+  height: 2px;
+
+  background-position: 0px 40px;
+  background-repeat: repeat-x;
+} */
+
+@media (max-width: 992px) {
+  .aboutus1>video {
+    width: 100%;
+    height: 350px;
+    object-position: top center;
+  }
+  .aboutus2 > img {
+    width:100%;
+    height: 300px;
+  }
+  .aboutus3 > img {
+    width:100%;
+    height: 300px;
+  }
+  .aboutus1:after {
+    content: none;
+  }
+  .aboutus1:before {
+    content: none;
+  }
+  .lineParagraph:after {
+    content: none;
+  }
+
+  .lineParagraph:before {
+    content: none;
+  }
+  .sectionParagraphContainerFirst{
+    background:none;
+    padding: 10px 0px 0px 0px !important;
+  }
+  .sectionParagraphContainerFirst:after {
+    content: none;
+  }
+
+  .sectionParagraphContainerFirst:before {
+    content: none;
+  }
+
+  .sectionParagraphContainerSecond:after {
+    content: none;
+
+  }
+
+  .sectionParagraphContainerSecond:before {
+    content: none;
+
+  }
+.sectionParagraphContainerThird:before {
+  content: none;
+}
+  .aboutus2:before{
+    content: none;
+  }
+  .aboutus2:after{
+    content: none;
+  }
+
+  
+  .reverseBlock{
+    display: flex;
+    flex-direction: column-reverse;
+
+  }
+.paragraphMiniBorder:after {
+content: none;
+}
+}

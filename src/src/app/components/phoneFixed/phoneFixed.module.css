@@ -1,0 +1,20 @@
+.phoneFixed{
+  position: fixed;
+  bottom:20px;
+  z-index: 150;
+  right:20px;
+}
+.phoneFixed > a {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--golden);
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px -10px #000000;
+}
+.phoneFixed > a > svg {
+  font-size:30px;
+  color: var(--sweety-cream);
+}

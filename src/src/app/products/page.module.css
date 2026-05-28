@@ -1,0 +1,152 @@
+
+.fabric{
+  padding:0px 10px;
+}
+.fabric:first-child{
+  padding:0px 10px 0px 0px !important;
+}
+
+.fabric:last-child{
+  padding:0px 0px 0px 10px !important;
+}
+.fabricContainer{
+  position: relative;
+  padding: 20px 0px;
+}
+.fabricContainer:last-child:after{
+  background:none
+}
+
+.fabricContainer:after{
+  content: "";
+  position: absolute;
+  bottom:0px;
+  left:-80px;
+  right:-10px;
+  background: url(/images/line2.png);
+  display: block;
+  /* width: 100%; */
+  height: 2px;
+  background-repeat: repeat-x;
+}
+.fabricLine{
+position: relative;
+}
+.fabricLine:before{
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  bottom: 50px;
+  right: 80%;
+  left: -28%;
+  height: 2px;
+  background-repeat: repeat-x;
+  transform: rotate(90deg);
+}
+.productImages{
+  width:100%;
+  height: 600px;
+  object-fit: cover;
+}
+.biggerText{
+  position: relative;
+  margin:0px 0px 120px 0px;
+}
+
+.biggerText:after{
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  top: 430px;
+  right: 60%;
+  left: -48%;
+  height: 2px;
+  background-repeat: repeat-x;
+  transform: rotate(90deg);
+}
+.biggerText:before{
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  top: 430px;
+  left: 60%;
+  right: -48%;
+  height: 2px;
+  background-repeat: repeat-x;
+  transform: rotate(90deg);
+}
+h1.topHeading{
+  margin-bottom:20px !important
+}
+.biggerTextLine{
+  width: auto !important;
+left: -50vw;
+right: -50vw;
+position: absolute;
+}
+
+.biggerText >p{
+  text-align: center;
+  font-size:48px;
+  font-weight: 400;
+  color: var(--black);
+}
+.highlight{
+  background: var(--golden);
+  padding: 5px;
+}
+.workWithExpert{
+  position: relative;
+  margin:50px 0px 50px 0px;
+}
+
+/* .workWithExpert:before{
+  content: "";
+  position: absolute;
+  background: url(/images/line2.png);
+  top: -40px;
+  left: -20px;
+  right: -20px;
+  height: 2px;
+  background-repeat: repeat-x;
+} */
+.line{
+  background: url(/images/line2.png);
+  width: 100vw;
+
+  height: 2px;
+  background-repeat: repeat-x;
+  margin:20px 0px 0px 0px;
+}
+.headerWithBackground{
+  margin: 40px 0px 10px 0px;
+}
+@media (max-width: 1200px) {
+  .biggerText:after{
+    top: 430px;
+    right: 50%;
+    left: -58%;
+  }
+  .biggerText:before{
+    top: 430px;
+    left: 50%;
+    right: -58%;
+  }
+.productImages{
+  height:400px;
+}
+
+}
+@media (max-width: 992px) {
+  .productImages{
+    height:300px;
+    margin: 0px auto;
+    display: block;
+    /* width: 70%; */
+    border:10px solid var(--golden)
+  }
+.headerWithBackground{
+  margin: 10px 0px;
+
+}
+}
