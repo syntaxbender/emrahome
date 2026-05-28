@@ -35,7 +35,7 @@ jobs:
 
       - name: Build Docker image (SHA tag)
         run: |
-          docker build -f src/Dockerfile -t "${{ steps.image.outputs.sha_tag }}" src
+          docker build -f src/Dockerfile -t "${{ steps.image.outputs.sha_tag }}" .
 
       - name: Tag Docker image as latest
         run: |

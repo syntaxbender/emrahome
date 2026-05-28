@@ -2,7 +2,7 @@
 FROM docker.io/chainguard/node:latest AS build
 WORKDIR /src
 
-COPY --chown=node:node ./ ./
+COPY --chown=node:node ./src/ ./
 RUN npm install
 RUN npm run build
 
